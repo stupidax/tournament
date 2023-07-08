@@ -1,0 +1,110 @@
+===================================================
+
+		The TOURNAMENT
+
+===================================================
+
+Princpe : 
+
+Jeu simple d'affrontement d'ennemi jusqu'à un boss.
+Mélange d'un RPG classique au tour par tour / un action RPG avec du timing / un rogue-like pour la progression.
+
+Ecran Titre : 
+	- Début
+	- Option
+		.Son (volume)
+		.Music (volume)
+		.retour
+	- Crédits
+	- Quit
+
+Combat : 
+
+Le joueur et chaque monstre possède des PV
+Il y a aussi une jauge de puissance qui se rempli au fur et à mesure, cette jauge est graduée et chaque graduation compte 1 unit de valeur.
+
+Le joueur possède des actions qui coûte des unit de valeur.
+Ces actions, en plus d'avoir un timeur interne, vont demander une certaine quantité de puissance, ce qui fait qu'on ne peut pas les lancer quand on veut.
+Les actions vont faire des dégâts, apporter des bonus ou malus, soigner etc. en fonction de nos stats.
+
+L'Equipement : (achat en Or après combat)
+-----------
+Arme = Attaque = dégât						Base = 10	(+10 * niv.)
+Pouvoir = Magie = dégât magique					Base = 20	(+20 * niv.)
+Armure = PV = point de vie					Base = 200	(+100 * niv.)
+Orb = quantité de puissance 					Base = 10	(+2 * niv.)
+Anneau = amélioration de la vitesse de recharge de puissance	Base = 2 / sec.	(+1 * niv.)
+
+Les actions : (achat en Or après combat)
+-------------
+NOM		Coût		Effet
+---------------------------------------------------------------
+Frappe		1		préparation 1.0 : 100% dégât
+Estoc		2		préparation 2.0 : 250% dégât
+Charge		3		préparation 3.0 : 625% dégât
+Assaut		4		préparation 4.0 : 1562.5% dégât
+Execution	5		préparation 5.0 : 3906.25% dégât
+
+roulade		1		0.25 sec 90% dégât en moins
+Parade		2		0.50 sec 55% dégât en moins
+Blocage		3		1.00 sec 30% dégât en moins
+Fumée		4		1.50 sec 50% dégât en moins
+Téléportation	5		2.00 sec 75% dégât en moins
+
+Instant		1		incantation 1.0 sec = 100% magie
+Concentration	2		incantation 1.5 sec = 300% magie
+Incantation	3		incantation 2.0 sec = 900% magie
+Canalisation	4		incantation 2.5 sec = 2700% magie
+Invocation	5		incantation 3.0 sec = 8100% magie
+
+Les Passifs : (niv. 10 max pour chaque)
+-------------
+Pour obtenir des passifs : chaque fois qu'on défend des dégâts ou inflige des dégâts, on monte une jauge, une fois au max on débloque une orb
+qui permet de choisir 1 passif au choix entre 3)
+-------------
+magie
+Magie runique : incantation -0.1 sec.(*-)
+Maîtrise magique : chaque sort ajoute un débuff qui augmente la magie subit de 10%(*+)
+Arcane magique : tous les 10(*-) sorts = 1 sort gratuit instantanée
+
+defense
+Défense soutenue : Durée de défense +0.1 sec(*+)
+Résilience : chaque défense ajoute un buff d'1 sec qui réduit les dégâts subit de 10%(*+)
+Second souffle : chaque défense réussi permet de récupérer 1 unité de puissance(*+)
+
+attaque
+Cruel : chaque attaque ajoute un débuf qui fait saigner la cible 10% dégât / sec.(*+)
+Combattant : préparation -0.1 sec(*-)
+Critique : toutes les 10(*-) attaques Etourdi la cible pour 1 sec.
+
+Etats :
+-------
+Neutre = 100% dégâts
+Incantation = 150% dégâts
+Préparation = 125% dégâts
+Etourdi = 200% dégâts
+
+
+Il faut anticiper pour défendre (avoir assez de jauge pour défendre) et avoir le bon timing pour défendre.
+
+DEMO :
+======
+
+Ecran titre
+Ecran combat
+Ecran récompense
+3 Ennemis
+1 Boss
+1 Joueur
+Ecran Game Over
+
+(+)
+Option
+Son
+Music
+
+Feat. 
+32 ennemis (en tournoi) random au départ soit 5 combat + finalist
+les ennemis gagnent en puissance en fonction de leur style à chaque round
+mode trainning contre chaque ennemi à chaque niveau du tournoi.
+mode défie ou on affronte chaque ennemi
