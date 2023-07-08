@@ -1,5 +1,5 @@
 extends Node2D
-
+export(PackedScene) var Mob
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -14,3 +14,7 @@ func _ready():
 func _process(_delta):
 	if Input.is_action_just_pressed("ui_cancel"):
 		get_tree().quit()
+
+
+func newMob():
+	var vNewMob = Mob.instance()
