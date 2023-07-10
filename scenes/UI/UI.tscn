@@ -18,238 +18,127 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="cont_Full" type="VBoxContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+[node name="cont_Xp" type="HBoxContainer" parent="cont_Full"]
 margin_right = 640.0
 margin_bottom = 20.0
+
+[node name="level" type="Label" parent="cont_Full/cont_Xp"]
+margin_right = 20.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 20, 20 )
+text = "0"
+align = 1
+valign = 1
+
+[node name="bar_xp" type="ProgressBar" parent="cont_Full/cont_Xp"]
+margin_left = 24.0
+margin_right = 640.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+step = 1.0
+
+[node name="cont_name" type="HBoxContainer" parent="cont_Full"]
+margin_top = 24.0
+margin_right = 640.0
+margin_bottom = 44.0
+
+[node name="name_player" type="Label" parent="cont_Full/cont_name"]
+margin_right = 306.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+text = "Player"
+valign = 1
+
+[node name="wave" type="Label" parent="cont_Full/cont_name"]
+margin_left = 310.0
+margin_right = 330.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 20, 20 )
+size_flags_vertical = 7
+text = "0"
+align = 1
+valign = 1
+
+[node name="name_mob" type="Label" parent="cont_Full/cont_name"]
+margin_left = 334.0
+margin_right = 640.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+text = "Mob"
+align = 2
+valign = 1
+
+[node name="cont_HP" type="HBoxContainer" parent="cont_Full"]
+margin_top = 48.0
+margin_right = 640.0
+margin_bottom = 68.0
 rect_min_size = Vector2( 0, 20 )
 size_flags_horizontal = 3
 size_flags_vertical = 0
 alignment = 1
 
-[node name="playerHP" type="Label" parent="VBoxContainer/HBoxContainer"]
+[node name="HP_player" type="Label" parent="cont_Full/cont_HP"]
 margin_top = 3.0
 margin_right = 40.0
 margin_bottom = 17.0
 rect_min_size = Vector2( 40, 0 )
 text = "0"
-align = 2
+align = 1
+valign = 1
 
-[node name="playerHPbar" type="ProgressBar" parent="VBoxContainer/HBoxContainer"]
+[node name="bar_HP_player" type="ProgressBar" parent="cont_Full/cont_HP"]
 margin_left = 44.0
 margin_right = 318.0
 margin_bottom = 20.0
 size_flags_horizontal = 3
 size_flags_vertical = 1
 step = 1.0
-value = 100.0
 
-[node name="mobHPbar" type="ProgressBar" parent="VBoxContainer/HBoxContainer"]
+[node name="bar_HP_mob" type="ProgressBar" parent="cont_Full/cont_HP"]
 margin_left = 322.0
 margin_right = 596.0
 margin_bottom = 20.0
 size_flags_horizontal = 11
 size_flags_vertical = 1
 step = 1.0
-value = 100.0
 
-[node name="mobHP" type="Label" parent="VBoxContainer/HBoxContainer"]
+[node name="HP_mob" type="Label" parent="cont_Full/cont_HP"]
 margin_left = 600.0
 margin_top = 3.0
 margin_right = 640.0
 margin_bottom = 17.0
 rect_min_size = Vector2( 40, 0 )
 text = "0"
+align = 1
+valign = 1
 
-[node name="Grid" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 24.0
+[node name="cont_power" type="HBoxContainer" parent="cont_Full"]
+margin_top = 72.0
 margin_right = 640.0
-margin_bottom = 296.0
-size_flags_vertical = 3
-
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Grid"]
-margin_right = 318.0
-margin_bottom = 272.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Grid/HBoxContainer"]
-margin_right = 78.0
-margin_bottom = 272.0
-alignment = 2
-
-[node name="VBoxContainer3" type="VBoxContainer" parent="VBoxContainer/Grid/HBoxContainer/HBoxContainer"]
-margin_right = 10.0
-margin_bottom = 272.0
-rect_min_size = Vector2( 10, 0 )
-
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Grid/HBoxContainer/HBoxContainer"]
-margin_left = 14.0
-margin_right = 44.0
-margin_bottom = 272.0
-rect_min_size = Vector2( 30, 30 )
-alignment = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Grid/HBoxContainer/HBoxContainer/VBoxContainer"]
-margin_top = 174.0
-margin_right = 30.0
-margin_bottom = 204.0
-rect_min_size = Vector2( 30, 30 )
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/Grid/HBoxContainer/HBoxContainer/VBoxContainer"]
-margin_top = 208.0
-margin_right = 30.0
-margin_bottom = 238.0
-rect_min_size = Vector2( 30, 30 )
-
-[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer/Grid/HBoxContainer/HBoxContainer/VBoxContainer"]
-margin_top = 242.0
-margin_right = 30.0
-margin_bottom = 272.0
-rect_min_size = Vector2( 30, 30 )
-
-[node name="TextureButton" type="TextureButton" parent="VBoxContainer/Grid/HBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer3"]
-margin_right = 30.0
-margin_bottom = 30.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture_normal = ExtResource( 3 )
-texture_pressed = ExtResource( 2 )
-texture_disabled = ExtResource( 1 )
-
-[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/Grid/HBoxContainer/HBoxContainer"]
-margin_left = 48.0
-margin_right = 78.0
-margin_bottom = 272.0
-rect_min_size = Vector2( 30, 30 )
-alignment = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Grid/HBoxContainer/HBoxContainer/VBoxContainer2"]
-margin_top = 174.0
-margin_right = 30.0
-margin_bottom = 204.0
-rect_min_size = Vector2( 30, 30 )
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/Grid/HBoxContainer/HBoxContainer/VBoxContainer2"]
-margin_top = 208.0
-margin_right = 30.0
-margin_bottom = 238.0
-rect_min_size = Vector2( 30, 30 )
-
-[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer/Grid/HBoxContainer/HBoxContainer/VBoxContainer2"]
-margin_top = 242.0
-margin_right = 30.0
-margin_bottom = 272.0
-rect_min_size = Vector2( 30, 30 )
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/Grid"]
-margin_left = 322.0
-margin_right = 640.0
-margin_bottom = 272.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-alignment = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Grid/HBoxContainer2"]
-margin_left = 240.0
-margin_right = 318.0
-margin_bottom = 272.0
-alignment = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Grid/HBoxContainer2/HBoxContainer"]
-margin_right = 30.0
-margin_bottom = 272.0
-rect_min_size = Vector2( 30, 30 )
-alignment = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Grid/HBoxContainer2/HBoxContainer/VBoxContainer"]
-margin_top = 174.0
-margin_right = 30.0
-margin_bottom = 204.0
-rect_min_size = Vector2( 30, 30 )
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/Grid/HBoxContainer2/HBoxContainer/VBoxContainer"]
-margin_top = 208.0
-margin_right = 30.0
-margin_bottom = 238.0
-rect_min_size = Vector2( 30, 30 )
-
-[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer/Grid/HBoxContainer2/HBoxContainer/VBoxContainer"]
-margin_top = 242.0
-margin_right = 30.0
-margin_bottom = 272.0
-rect_min_size = Vector2( 30, 30 )
-
-[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/Grid/HBoxContainer2/HBoxContainer"]
-margin_left = 34.0
-margin_right = 64.0
-margin_bottom = 272.0
-rect_min_size = Vector2( 30, 30 )
-alignment = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Grid/HBoxContainer2/HBoxContainer/VBoxContainer2"]
-margin_top = 174.0
-margin_right = 30.0
-margin_bottom = 204.0
-rect_min_size = Vector2( 30, 30 )
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/Grid/HBoxContainer2/HBoxContainer/VBoxContainer2"]
-margin_top = 208.0
-margin_right = 30.0
-margin_bottom = 238.0
-rect_min_size = Vector2( 30, 30 )
-
-[node name="TextureButton" type="TextureButton" parent="VBoxContainer/Grid/HBoxContainer2/HBoxContainer/VBoxContainer2/HBoxContainer2"]
-margin_right = 30.0
-margin_bottom = 30.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture_normal = ExtResource( 7 )
-texture_pressed = ExtResource( 4 )
-texture_disabled = ExtResource( 6 )
-
-[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer/Grid/HBoxContainer2/HBoxContainer/VBoxContainer2"]
-margin_top = 242.0
-margin_right = 30.0
-margin_bottom = 272.0
-rect_min_size = Vector2( 30, 30 )
-
-[node name="TextureButton" type="TextureButton" parent="VBoxContainer/Grid/HBoxContainer2/HBoxContainer/VBoxContainer2/HBoxContainer3"]
-margin_right = 30.0
-margin_bottom = 30.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture_normal = ExtResource( 9 )
-texture_pressed = ExtResource( 5 )
-texture_disabled = ExtResource( 8 )
-
-[node name="VBoxContainer3" type="VBoxContainer" parent="VBoxContainer/Grid/HBoxContainer2/HBoxContainer"]
-margin_left = 68.0
-margin_right = 78.0
-margin_bottom = 272.0
-rect_min_size = Vector2( 10, 0 )
-
-[node name="UIPlayer" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 300.0
-margin_right = 640.0
-margin_bottom = 320.0
+margin_bottom = 92.0
 grow_horizontal = 2
 grow_vertical = 2
 rect_min_size = Vector2( 0, 20 )
 
-[node name="xpBar" type="ProgressBar" parent="VBoxContainer/UIPlayer"]
+[node name="bar_power_player" type="ProgressBar" parent="cont_Full/cont_power"]
 margin_right = 294.0
 margin_bottom = 20.0
 size_flags_horizontal = 3
 size_flags_vertical = 1
+max_value = 10.0
+step = 0.1
 
-[node name="level" type="Label" parent="VBoxContainer/UIPlayer"]
+[node name="power_player" type="Label" parent="cont_Full/cont_power"]
 margin_left = 298.0
 margin_right = 318.0
 margin_bottom = 20.0
@@ -259,7 +148,7 @@ text = "0"
 align = 1
 valign = 1
 
-[node name="power" type="Label" parent="VBoxContainer/UIPlayer"]
+[node name="power_mob" type="Label" parent="cont_Full/cont_power"]
 margin_left = 322.0
 margin_right = 342.0
 margin_bottom = 20.0
@@ -269,10 +158,224 @@ text = "0"
 align = 1
 valign = 1
 
-[node name="powerBar" type="ProgressBar" parent="VBoxContainer/UIPlayer"]
+[node name="bar_power_mob" type="ProgressBar" parent="cont_Full/cont_power"]
 margin_left = 346.0
 margin_right = 640.0
 margin_bottom = 20.0
 grow_horizontal = 0
 size_flags_horizontal = 11
 size_flags_vertical = 3
+max_value = 10.0
+step = 0.1
+
+[node name="cont_passif" type="HBoxContainer" parent="cont_Full"]
+margin_top = 96.0
+margin_right = 640.0
+margin_bottom = 116.0
+rect_min_size = Vector2( 0, 20 )
+
+[node name="passif_player" type="HBoxContainer" parent="cont_Full/cont_passif"]
+margin_right = 318.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="passif_mob" type="HBoxContainer" parent="cont_Full/cont_passif"]
+margin_left = 322.0
+margin_right = 640.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="cont_buff" type="HBoxContainer" parent="cont_Full"]
+margin_top = 120.0
+margin_right = 640.0
+margin_bottom = 140.0
+rect_min_size = Vector2( 0, 20 )
+
+[node name="buff_player" type="HBoxContainer" parent="cont_Full/cont_buff"]
+margin_right = 318.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="buff_mob" type="HBoxContainer" parent="cont_Full/cont_buff"]
+margin_left = 322.0
+margin_right = 640.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="cont_icon" type="HBoxContainer" parent="cont_Full"]
+margin_top = 144.0
+margin_right = 640.0
+margin_bottom = 296.0
+size_flags_vertical = 3
+
+[node name="cont_left_0" type="HBoxContainer" parent="cont_Full/cont_icon"]
+margin_right = 318.0
+margin_bottom = 152.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="cont_left_1" type="HBoxContainer" parent="cont_Full/cont_icon/cont_left_0"]
+margin_right = 88.0
+margin_bottom = 152.0
+alignment = 2
+
+[node name="cont_marge_left" type="VBoxContainer" parent="cont_Full/cont_icon/cont_left_0/cont_left_1"]
+margin_right = 20.0
+margin_bottom = 152.0
+rect_min_size = Vector2( 20, 0 )
+
+[node name="cont_left_2" type="VBoxContainer" parent="cont_Full/cont_icon/cont_left_0/cont_left_1"]
+margin_left = 24.0
+margin_right = 54.0
+margin_bottom = 152.0
+rect_min_size = Vector2( 30, 30 )
+alignment = 2
+
+[node name="cont_left_icon1" type="HBoxContainer" parent="cont_Full/cont_icon/cont_left_0/cont_left_1/cont_left_2"]
+margin_top = 54.0
+margin_right = 30.0
+margin_bottom = 84.0
+rect_min_size = Vector2( 30, 30 )
+
+[node name="cont_left_icon2" type="HBoxContainer" parent="cont_Full/cont_icon/cont_left_0/cont_left_1/cont_left_2"]
+margin_top = 88.0
+margin_right = 30.0
+margin_bottom = 118.0
+rect_min_size = Vector2( 30, 30 )
+
+[node name="cont_left_icon3" type="HBoxContainer" parent="cont_Full/cont_icon/cont_left_0/cont_left_1/cont_left_2"]
+margin_top = 122.0
+margin_right = 30.0
+margin_bottom = 152.0
+rect_min_size = Vector2( 30, 30 )
+
+[node name="icon_def_1" type="TextureButton" parent="cont_Full/cont_icon/cont_left_0/cont_left_1/cont_left_2/cont_left_icon3"]
+margin_right = 30.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 2 )
+texture_disabled = ExtResource( 1 )
+
+[node name="cont_left_4" type="VBoxContainer" parent="cont_Full/cont_icon/cont_left_0/cont_left_1"]
+margin_left = 58.0
+margin_right = 88.0
+margin_bottom = 152.0
+rect_min_size = Vector2( 30, 30 )
+alignment = 2
+
+[node name="cont_left_icon4" type="HBoxContainer" parent="cont_Full/cont_icon/cont_left_0/cont_left_1/cont_left_4"]
+margin_top = 54.0
+margin_right = 30.0
+margin_bottom = 84.0
+rect_min_size = Vector2( 30, 30 )
+
+[node name="cont_left_icon5" type="HBoxContainer" parent="cont_Full/cont_icon/cont_left_0/cont_left_1/cont_left_4"]
+margin_top = 88.0
+margin_right = 30.0
+margin_bottom = 118.0
+rect_min_size = Vector2( 30, 30 )
+
+[node name="cont_left_icon6" type="HBoxContainer" parent="cont_Full/cont_icon/cont_left_0/cont_left_1/cont_left_4"]
+margin_top = 122.0
+margin_right = 30.0
+margin_bottom = 152.0
+rect_min_size = Vector2( 30, 30 )
+
+[node name="cont_right_0" type="HBoxContainer" parent="cont_Full/cont_icon"]
+margin_left = 322.0
+margin_right = 640.0
+margin_bottom = 152.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 2
+
+[node name="cont_right_1" type="HBoxContainer" parent="cont_Full/cont_icon/cont_right_0"]
+margin_left = 230.0
+margin_right = 318.0
+margin_bottom = 152.0
+alignment = 2
+
+[node name="cont_right_2" type="VBoxContainer" parent="cont_Full/cont_icon/cont_right_0/cont_right_1"]
+margin_right = 30.0
+margin_bottom = 152.0
+rect_min_size = Vector2( 30, 30 )
+alignment = 2
+
+[node name="cont_icon1" type="HBoxContainer" parent="cont_Full/cont_icon/cont_right_0/cont_right_1/cont_right_2"]
+margin_top = 54.0
+margin_right = 30.0
+margin_bottom = 84.0
+rect_min_size = Vector2( 30, 30 )
+
+[node name="cont_icon2" type="HBoxContainer" parent="cont_Full/cont_icon/cont_right_0/cont_right_1/cont_right_2"]
+margin_top = 88.0
+margin_right = 30.0
+margin_bottom = 118.0
+rect_min_size = Vector2( 30, 30 )
+
+[node name="cont_icon3" type="HBoxContainer" parent="cont_Full/cont_icon/cont_right_0/cont_right_1/cont_right_2"]
+margin_top = 122.0
+margin_right = 30.0
+margin_bottom = 152.0
+rect_min_size = Vector2( 30, 30 )
+
+[node name="cont_right_3" type="VBoxContainer" parent="cont_Full/cont_icon/cont_right_0/cont_right_1"]
+margin_left = 34.0
+margin_right = 64.0
+margin_bottom = 152.0
+rect_min_size = Vector2( 30, 30 )
+alignment = 2
+
+[node name="cont_icon4" type="HBoxContainer" parent="cont_Full/cont_icon/cont_right_0/cont_right_1/cont_right_3"]
+margin_top = 54.0
+margin_right = 30.0
+margin_bottom = 84.0
+rect_min_size = Vector2( 30, 30 )
+
+[node name="cont_icon5" type="HBoxContainer" parent="cont_Full/cont_icon/cont_right_0/cont_right_1/cont_right_3"]
+margin_top = 88.0
+margin_right = 30.0
+margin_bottom = 118.0
+rect_min_size = Vector2( 30, 30 )
+
+[node name="icon_mag_1" type="TextureButton" parent="cont_Full/cont_icon/cont_right_0/cont_right_1/cont_right_3/cont_icon5"]
+margin_right = 30.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 4 )
+texture_disabled = ExtResource( 6 )
+
+[node name="cont_icon6" type="HBoxContainer" parent="cont_Full/cont_icon/cont_right_0/cont_right_1/cont_right_3"]
+margin_top = 122.0
+margin_right = 30.0
+margin_bottom = 152.0
+rect_min_size = Vector2( 30, 30 )
+
+[node name="icon_atq_1" type="TextureButton" parent="cont_Full/cont_icon/cont_right_0/cont_right_1/cont_right_3/cont_icon6"]
+margin_right = 30.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 5 )
+texture_disabled = ExtResource( 8 )
+
+[node name="cont_marge_right" type="VBoxContainer" parent="cont_Full/cont_icon/cont_right_0/cont_right_1"]
+margin_left = 68.0
+margin_right = 88.0
+margin_bottom = 152.0
+rect_min_size = Vector2( 20, 0 )
+
+[node name="cont_marge_down" type="HBoxContainer" parent="cont_Full"]
+margin_top = 300.0
+margin_right = 640.0
+margin_bottom = 320.0
+rect_min_size = Vector2( 0, 20 )

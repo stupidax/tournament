@@ -9,3 +9,8 @@ script = ExtResource( 1 )
 Mob = ExtResource( 2 )
 
 [node name="UI" parent="." instance=ExtResource( 3 )]
+
+[node name="Timer_power_player" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer_power_player" to="." method="_on_Timer_power_player_timeout"]
