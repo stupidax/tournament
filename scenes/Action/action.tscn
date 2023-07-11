@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://script/action.gd" type="Script" id=1]
+[ext_resource path="res://assets/UI/icon/icon-atk_1.png" type="Texture" id=2]
+[ext_resource path="res://assets/UI/icon/icon-atk_0.png" type="Texture" id=3]
+[ext_resource path="res://assets/UI/icon/icon-atk_2.png" type="Texture" id=4]
+[ext_resource path="res://assets/UI/m3x6.ttf" type="DynamicFontData" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+outline_color = Color( 0.14902, 0.0196078, 0.0196078, 1 )
+font_data = ExtResource( 5 )
+
+[node name="action" type="TextureButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 2 )
+texture_disabled = ExtResource( 4 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="level" type="Label" parent="."]
+margin_left = 1.0
+margin_right = 14.0
+margin_bottom = 13.0
+rect_min_size = Vector2( 13, 13 )
+custom_fonts/font = SubResource( 1 )
+text = "0"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="." to="." method="_on_action_pressed"]
