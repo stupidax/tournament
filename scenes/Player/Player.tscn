@@ -4,18 +4,6 @@
 [ext_resource path="res://assets/Player/test.png" type="Texture" id=2]
 [ext_resource path="res://assets/Player/ballons_idle_2.png" type="Texture" id=3]
 
-[sub_resource type="AtlasTexture" id=5]
-atlas = ExtResource( 2 )
-region = Rect2( 0, 160, 213, 160 )
-
-[sub_resource type="AtlasTexture" id=6]
-atlas = ExtResource( 2 )
-region = Rect2( 213, 160, 213, 160 )
-
-[sub_resource type="AtlasTexture" id=7]
-atlas = ExtResource( 2 )
-region = Rect2( 426, 160, 213, 160 )
-
 [sub_resource type="AtlasTexture" id=8]
 flags = 4
 atlas = ExtResource( 3 )
@@ -36,8 +24,25 @@ flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 381, 0, 127, 200 )
 
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 160, 213, 160 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 2 )
+region = Rect2( 213, 160, 213, 160 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 2 )
+region = Rect2( 426, 160, 213, 160 )
+
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
+"frames": [ SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
 "frames": [ SubResource( 5 ), SubResource( 6 ), SubResource( 7 ) ],
 "loop": false,
 "name": "attack",
@@ -50,17 +55,12 @@ animations = [ {
 }, {
 "frames": [  ],
 "loop": true,
-"name": "defend",
+"name": "hit",
 "speed": 5.0
 }, {
 "frames": [  ],
 "loop": true,
-"name": "hit",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ) ],
-"loop": true,
-"name": "idle",
+"name": "recup",
 "speed": 5.0
 }, {
 "frames": [  ],
@@ -70,7 +70,7 @@ animations = [ {
 }, {
 "frames": [  ],
 "loop": true,
-"name": "recup",
+"name": "defend",
 "speed": 5.0
 } ]
 
