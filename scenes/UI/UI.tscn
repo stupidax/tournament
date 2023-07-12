@@ -174,8 +174,9 @@ size_flags_vertical = 3
 margin_left = 322.0
 margin_right = 640.0
 margin_bottom = 20.0
-size_flags_horizontal = 3
+size_flags_horizontal = 11
 size_flags_vertical = 3
+alignment = 2
 
 [node name="cont_buff" type="HBoxContainer" parent="cont_Full"]
 margin_top = 120.0
@@ -202,73 +203,33 @@ margin_right = 640.0
 margin_bottom = 296.0
 size_flags_vertical = 3
 
-[node name="cont_left_0" type="HBoxContainer" parent="cont_Full/cont_icon"]
+[node name="cont_left" type="HBoxContainer" parent="cont_Full/cont_icon"]
 margin_right = 318.0
 margin_bottom = 152.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="cont_left_1" type="HBoxContainer" parent="cont_Full/cont_icon/cont_left_0"]
-margin_right = 88.0
-margin_bottom = 152.0
-alignment = 2
-
-[node name="cont_marge_left" type="VBoxContainer" parent="cont_Full/cont_icon/cont_left_0/cont_left_1"]
-margin_right = 20.0
-margin_bottom = 152.0
-rect_min_size = Vector2( 20, 0 )
-
-[node name="cont_left_2" type="VBoxContainer" parent="cont_Full/cont_icon/cont_left_0/cont_left_1"]
-margin_left = 24.0
-margin_right = 54.0
-margin_bottom = 152.0
-rect_min_size = Vector2( 30, 30 )
-alignment = 2
-
-[node name="cont_left_icon1" type="HBoxContainer" parent="cont_Full/cont_icon/cont_left_0/cont_left_1/cont_left_2"]
+[node name="margin_left" type="MarginContainer" parent="cont_Full/cont_icon/cont_left"]
 margin_top = 54.0
-margin_right = 30.0
-margin_bottom = 84.0
-rect_min_size = Vector2( 30, 30 )
-
-[node name="cont_left_icon2" type="HBoxContainer" parent="cont_Full/cont_icon/cont_left_0/cont_left_1/cont_left_2"]
-margin_top = 88.0
-margin_right = 30.0
-margin_bottom = 118.0
-rect_min_size = Vector2( 30, 30 )
-
-[node name="cont_left_icon3" type="HBoxContainer" parent="cont_Full/cont_icon/cont_left_0/cont_left_1/cont_left_2"]
-margin_top = 122.0
-margin_right = 30.0
+margin_right = 70.0
 margin_bottom = 152.0
-rect_min_size = Vector2( 30, 30 )
+grow_horizontal = 0
+grow_vertical = 0
+rect_min_size = Vector2( 70, 0 )
+size_flags_horizontal = 0
+size_flags_vertical = 8
 
-[node name="cont_left_4" type="VBoxContainer" parent="cont_Full/cont_icon/cont_left_0/cont_left_1"]
-margin_left = 58.0
-margin_right = 88.0
-margin_bottom = 152.0
-rect_min_size = Vector2( 30, 30 )
-alignment = 2
+[node name="grid_left" type="GridContainer" parent="cont_Full/cont_icon/cont_left/margin_left"]
+margin_right = 70.0
+margin_bottom = 98.0
+grow_horizontal = 0
+grow_vertical = 0
+rect_min_size = Vector2( 30, 98 )
+size_flags_horizontal = 9
+size_flags_vertical = 3
+columns = 2
 
-[node name="cont_left_icon4" type="HBoxContainer" parent="cont_Full/cont_icon/cont_left_0/cont_left_1/cont_left_4"]
-margin_top = 54.0
-margin_right = 30.0
-margin_bottom = 84.0
-rect_min_size = Vector2( 30, 30 )
-
-[node name="cont_left_icon5" type="HBoxContainer" parent="cont_Full/cont_icon/cont_left_0/cont_left_1/cont_left_4"]
-margin_top = 88.0
-margin_right = 30.0
-margin_bottom = 118.0
-rect_min_size = Vector2( 30, 30 )
-
-[node name="cont_left_icon6" type="HBoxContainer" parent="cont_Full/cont_icon/cont_left_0/cont_left_1/cont_left_4"]
-margin_top = 122.0
-margin_right = 30.0
-margin_bottom = 152.0
-rect_min_size = Vector2( 30, 30 )
-
-[node name="cont_right_0" type="HBoxContainer" parent="cont_Full/cont_icon"]
+[node name="cont_right" type="HBoxContainer" parent="cont_Full/cont_icon"]
 margin_left = 322.0
 margin_right = 640.0
 margin_bottom = 152.0
@@ -276,66 +237,23 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 2
 
-[node name="cont_right_1" type="HBoxContainer" parent="cont_Full/cont_icon/cont_right_0"]
-margin_left = 230.0
+[node name="margin_right" type="MarginContainer" parent="cont_Full/cont_icon/cont_right"]
+margin_left = 248.0
+margin_top = 54.0
 margin_right = 318.0
 margin_bottom = 152.0
-alignment = 2
+rect_min_size = Vector2( 70, 0 )
+size_flags_horizontal = 8
+size_flags_vertical = 8
 
-[node name="cont_right_2" type="VBoxContainer" parent="cont_Full/cont_icon/cont_right_0/cont_right_1"]
-margin_right = 30.0
-margin_bottom = 152.0
-rect_min_size = Vector2( 30, 30 )
-alignment = 2
-
-[node name="cont_right_icon1" type="HBoxContainer" parent="cont_Full/cont_icon/cont_right_0/cont_right_1/cont_right_2"]
-margin_top = 54.0
-margin_right = 30.0
-margin_bottom = 84.0
-rect_min_size = Vector2( 30, 30 )
-
-[node name="cont_right_icon2" type="HBoxContainer" parent="cont_Full/cont_icon/cont_right_0/cont_right_1/cont_right_2"]
-margin_top = 88.0
-margin_right = 30.0
-margin_bottom = 118.0
-rect_min_size = Vector2( 30, 30 )
-
-[node name="cont_right_icon3" type="HBoxContainer" parent="cont_Full/cont_icon/cont_right_0/cont_right_1/cont_right_2"]
-margin_top = 122.0
-margin_right = 30.0
-margin_bottom = 152.0
-rect_min_size = Vector2( 30, 30 )
-
-[node name="cont_right_3" type="VBoxContainer" parent="cont_Full/cont_icon/cont_right_0/cont_right_1"]
-margin_left = 34.0
-margin_right = 64.0
-margin_bottom = 152.0
-rect_min_size = Vector2( 30, 30 )
-alignment = 2
-
-[node name="cont_right_icon4" type="HBoxContainer" parent="cont_Full/cont_icon/cont_right_0/cont_right_1/cont_right_3"]
-margin_top = 54.0
-margin_right = 30.0
-margin_bottom = 84.0
-rect_min_size = Vector2( 30, 30 )
-
-[node name="cont_right_icon5" type="HBoxContainer" parent="cont_Full/cont_icon/cont_right_0/cont_right_1/cont_right_3"]
-margin_top = 88.0
-margin_right = 30.0
-margin_bottom = 118.0
-rect_min_size = Vector2( 30, 30 )
-
-[node name="cont_right_icon6" type="HBoxContainer" parent="cont_Full/cont_icon/cont_right_0/cont_right_1/cont_right_3"]
-margin_top = 122.0
-margin_right = 30.0
-margin_bottom = 152.0
-rect_min_size = Vector2( 30, 30 )
-
-[node name="cont_marge_right" type="VBoxContainer" parent="cont_Full/cont_icon/cont_right_0/cont_right_1"]
-margin_left = 68.0
-margin_right = 88.0
-margin_bottom = 152.0
-rect_min_size = Vector2( 20, 0 )
+[node name="grid_right" type="GridContainer" parent="cont_Full/cont_icon/cont_right/margin_right"]
+margin_right = 70.0
+margin_bottom = 98.0
+grow_vertical = 0
+rect_min_size = Vector2( 30, 98 )
+size_flags_horizontal = 9
+size_flags_vertical = 8
+columns = 2
 
 [node name="cont_marge_down" type="HBoxContainer" parent="cont_Full"]
 margin_top = 300.0
