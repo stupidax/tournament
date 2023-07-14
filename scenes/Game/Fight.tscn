@@ -18,6 +18,5 @@ autostart = true
 
 [node name="Player" parent="." instance=ExtResource( 5 )]
 position = Vector2( 140, 193 )
-frame = 1
 
 [connection signal="timeout" from="Timer_power_player" to="." method="_on_Timer_power_player_timeout"]

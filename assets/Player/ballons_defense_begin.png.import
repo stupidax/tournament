@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ballons_idle.png-6560a948baaa2e58c0f95c835bf98e07.stex"
+path="res://.import/ballons_defense_begin.png-89062141276c83cb6783dfd27ebdb263.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Player/ballons_idle.png"
-dest_files=[ "res://.import/ballons_idle.png-6560a948baaa2e58c0f95c835bf98e07.stex" ]
+source_file="res://assets/Player/ballons_defense_begin.png"
+dest_files=[ "res://.import/ballons_defense_begin.png-89062141276c83cb6783dfd27ebdb263.stex" ]
 
 [params]
 
