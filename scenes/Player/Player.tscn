@@ -6,6 +6,26 @@
 [ext_resource path="res://assets/Player/ballons_defense_begin.png" type="Texture" id=4]
 [ext_resource path="res://assets/Player/ballons_defense_idle.png" type="Texture" id=5]
 
+[sub_resource type="AtlasTexture" id=8]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 127, 200 )
+
+[sub_resource type="AtlasTexture" id=9]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 127, 0, 127, 200 )
+
+[sub_resource type="AtlasTexture" id=10]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 254, 0, 127, 200 )
+
+[sub_resource type="AtlasTexture" id=11]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 381, 0, 127, 200 )
+
 [sub_resource type="AtlasTexture" id=5]
 atlas = ExtResource( 2 )
 region = Rect2( 0, 160, 213, 160 )
@@ -17,26 +37,6 @@ region = Rect2( 213, 160, 213, 160 )
 [sub_resource type="AtlasTexture" id=7]
 atlas = ExtResource( 2 )
 region = Rect2( 426, 160, 213, 160 )
-
-[sub_resource type="AtlasTexture" id=21]
-flags = 4
-atlas = ExtResource( 5 )
-region = Rect2( 0, 0, 127, 200 )
-
-[sub_resource type="AtlasTexture" id=22]
-flags = 4
-atlas = ExtResource( 5 )
-region = Rect2( 127, 0, 127, 200 )
-
-[sub_resource type="AtlasTexture" id=23]
-flags = 4
-atlas = ExtResource( 5 )
-region = Rect2( 254, 0, 127, 200 )
-
-[sub_resource type="AtlasTexture" id=24]
-flags = 4
-atlas = ExtResource( 5 )
-region = Rect2( 381, 0, 127, 200 )
 
 [sub_resource type="AtlasTexture" id=13]
 flags = 4
@@ -78,28 +78,33 @@ flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 0, 0, 127, 200 )
 
-[sub_resource type="AtlasTexture" id=8]
+[sub_resource type="AtlasTexture" id=21]
 flags = 4
-atlas = ExtResource( 3 )
+atlas = ExtResource( 5 )
 region = Rect2( 0, 0, 127, 200 )
 
-[sub_resource type="AtlasTexture" id=9]
+[sub_resource type="AtlasTexture" id=22]
 flags = 4
-atlas = ExtResource( 3 )
+atlas = ExtResource( 5 )
 region = Rect2( 127, 0, 127, 200 )
 
-[sub_resource type="AtlasTexture" id=10]
+[sub_resource type="AtlasTexture" id=23]
 flags = 4
-atlas = ExtResource( 3 )
+atlas = ExtResource( 5 )
 region = Rect2( 254, 0, 127, 200 )
 
-[sub_resource type="AtlasTexture" id=11]
+[sub_resource type="AtlasTexture" id=24]
 flags = 4
-atlas = ExtResource( 3 )
+atlas = ExtResource( 5 )
 region = Rect2( 381, 0, 127, 200 )
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
+"frames": [ SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
 "frames": [ SubResource( 5 ), SubResource( 6 ), SubResource( 7 ) ],
 "loop": false,
 "name": "attack",
@@ -110,29 +115,9 @@ animations = [ {
 "name": "dead",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ) ],
-"loop": true,
-"name": "defend",
-"speed": 5.0
-}, {
 "frames": [ SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ) ],
 "loop": true,
 "name": "defend-begin",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ) ],
-"loop": true,
-"name": "defend-end",
-"speed": 5.0
-}, {
-"frames": [  ],
-"loop": true,
-"name": "hit",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ) ],
-"loop": true,
-"name": "idle",
 "speed": 5.0
 }, {
 "frames": [  ],
@@ -144,12 +129,28 @@ animations = [ {
 "loop": true,
 "name": "recup",
 "speed": 5.0
+}, {
+"frames": [ SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ) ],
+"loop": true,
+"name": "defend-end",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ) ],
+"loop": true,
+"name": "defend",
+"speed": 5.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "hit",
+"speed": 5.0
 } ]
 
 [node name="Player" type="AnimatedSprite"]
 position = Vector2( 180, 144 )
 frames = SubResource( 1 )
 animation = "defend"
+frame = 2
 playing = true
 script = ExtResource( 1 )
 
